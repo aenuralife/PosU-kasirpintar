@@ -1,7 +1,27 @@
 @import "tailwindcss";
 
-html, body, #root {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #0f172a;
+  background: #f4f7f7;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { min-height: 100%; margin: 0; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid #20b2aa; outline-offset: 2px; }
+::selection { color: #073833; background: #99f6e4; }
+body { background: #f4f7f7; }
+
+@media print {
+  @page { size: 58mm auto; margin: 0; }
+  html, body, #root { width: 58mm !important; min-height: 0 !important; margin: 0 !important; background: #fff !important; }
+  body * { visibility: hidden !important; }
+  .receipt-print-area, .receipt-print-area * { visibility: visible !important; }
+  .receipt-print-area { position: fixed !important; inset: 0 auto auto 0 !important; width: 58mm !important; max-width: none !important; margin: 0 !important; padding: 3mm !important; background: #fff !important; color: #000 !important; font-family: ui-monospace, SFMono-Regular, Menlo, monospace !important; font-size: 10px !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }

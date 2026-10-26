@@ -25,7 +25,7 @@ Proyek ini adalah **Sistem Kasir Pintar (PosU)**, yaitu sebuah aplikasi kasir di
 
 ### 1. Use Case Diagram
 Menggambarkan interaksi **Aktor Kasir** dengan sistem. Kasir memiliki wewenang untuk melakukan 6 fungsi utama: mengelola produk, transaksi penjualan, pembayaran, cetak struk, melihat laporan, dan melihat riwayat transaksi.
-![Use Case Diagram](./docs/use-case.png)
+![Use Case Diagram](./docs/Usecase.png)
 
 ### 2. Sequence Diagram (Alur Transaksi & Sistem)
 Menjelaskan alur komunikasi berurutan antara **Kasir**, **Sistem**, dan **Database**. Dimulai dari kasir memilih produk, sistem memperbarui keranjang, proses input uang dan hitung kembalian otomatis, hingga sistem menyimpan data transaksi ke database.

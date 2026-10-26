@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { supabase } from './supabaseClient';
 
 export default function Auth() {
@@ -87,7 +87,7 @@ export default function Auth() {
                 type="text"
                 required
                 placeholder="Toko Jaya Abadi"
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
               />
@@ -102,7 +102,7 @@ export default function Auth() {
               type="email"
               required
               placeholder="kasir@tokoku.com"
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -116,7 +116,7 @@ export default function Auth() {
               type="password"
               required
               placeholder="••••••••"
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
@@ -132,7 +132,7 @@ export default function Auth() {
                 type="password"
                 required
                 placeholder="••••••••"
-                className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                className="w-full rounded-xl border border-slate-200 px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
               />
@@ -147,7 +147,7 @@ export default function Auth() {
                   type="checkbox"
                   checked={rememberMe}
                   onChange={(e) => setRememberMe(e.target.checked)}
-                  className="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 w-4 h-4"
+                  className="h-4 w-4 rounded border-slate-300 text-teal-600 focus:ring-teal-500"
                 />
                 <span className="font-medium">Ingat Sesi Login</span>
               </label>
@@ -157,7 +157,7 @@ export default function Auth() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-indigo-600 text-white font-bold py-3 px-4 rounded-xl shadow-lg shadow-indigo-200 hover:bg-indigo-700 transition active:scale-[0.98] disabled:opacity-50"
+            className="w-full rounded-xl bg-[#0d766e] px-4 py-3 font-bold text-white shadow-lg shadow-teal-200 transition hover:bg-[#095d57] active:scale-[0.98] disabled:opacity-50"
           >
             {loading ? 'Memproses...' : isSignUp ? 'Daftar Akun Baru' : 'Masuk ke Sistem'}
           </button>
@@ -174,7 +174,7 @@ export default function Auth() {
                   setIsSignUp(false);
                   setErrorMsg('');
                 }}
-                className="font-bold text-indigo-600 hover:underline"
+                className="font-bold text-teal-700 hover:underline"
               >
                 Masuk di sini
               </button>
@@ -188,7 +188,7 @@ export default function Auth() {
                   setIsSignUp(true);
                   setErrorMsg('');
                 }}
-                className="font-bold text-indigo-600 hover:underline"
+                className="font-bold text-teal-700 hover:underline"
               >
                 Daftar sekarang
               </button>
