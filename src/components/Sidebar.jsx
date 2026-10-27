@@ -1,5 +1,7 @@
+import { useEffect, useState } from 'react'
 import { useUIStore } from '../store/useUIStore'
-import { Bell, Coffee, LayoutDashboard, ShoppingCart, Package, UsersRound, ClipboardList, ChartNoAxesCombined, RotateCcw, Tag, Users, Settings, LogOut, Plus, Trash2, Minus, ArrowRight, Menu, Search, X, Pencil, Check, Printer } from 'lucide-react'
+import { supabase } from '../supabaseClient'
+import { Bell, LayoutDashboard, ShoppingCart, Package, UsersRound, ClipboardList, ChartNoAxesCombined, RotateCcw, Tag, Users, Settings, LogOut, Plus, Trash2, Minus, ArrowRight, Menu, Search, X, Pencil, Check, Printer } from 'lucide-react'
 
 const sections = [
   { label: 'MAIN MENU', items: [['Dashboard', 'dashboard'], ['Sales', 'sales'], ['Products', 'products'], ['Customers', 'customers'], ['Orders', 'orders']] },
@@ -9,7 +11,7 @@ const sections = [
 const icons = {
   dashboard: LayoutDashboard, sales: ShoppingCart, products: Package, customers: UsersRound,
   orders: ClipboardList, reports: ChartNoAxesCombined, returns: RotateCcw, discounts: Tag,
-  users: Users, settings: Settings, coffee: Coffee, logout: LogOut,
+  users: Users, settings: Settings, logout: LogOut,
   plus: Plus, trash: Trash2, minus: Minus, arrow: ArrowRight, menu: Menu, search: Search, bell: Bell, close: X, edit: Pencil, check: Check, print: Printer,
 }
 
@@ -21,12 +23,33 @@ export function Icon({ name, size = 20, className = '' }) {
 export default function Sidebar({ user, onSignOut, mobileOpen = false, onClose }) {
   const activeMenu = useUIStore((state) => state.activeMenu)
   const setActiveMenu = useUIStore((state) => state.setActiveMenu)
+  const [storeName, setStoreName] = useState('')
+  const [storeLoading, setStoreLoading] = useState(true)
+
+  useEffect(() => {
+    let active = true
+    const loadStoreName = async () => {
+      const { data } = await supabase
+        .from('store_settings')
+        .select('store_name')
+        .limit(1)
+        .maybeSingle()
+      if (active) {
+        setStoreName(data?.store_name?.trim() || '')
+        setStoreLoading(false)
+      }
+    }
+    loadStoreName().catch(() => { if (active) setStoreLoading(false) })
+    return () => { active = false }
+  }, [])
+
+  const displayStoreName = storeName || (storeLoading ? 'PosU' : 'Toko Saya')
   return <>
     {mobileOpen && <button aria-label="Close navigation" onClick={onClose} className="fixed inset-0 z-40 bg-slate-950/40 lg:hidden" />}
     <aside className={`fixed inset-y-0 left-0 z-50 flex h-screen w-[252px] flex-col gap-3 overflow-hidden bg-[#073833] p-3 text-white transition-transform lg:sticky lg:top-0 lg:z-auto lg:translate-x-0 ${mobileOpen ? 'translate-x-0' : '-translate-x-full'}`}>
       <div className="flex shrink-0 items-center gap-3 px-2 py-1">
-        <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#20B2AA] text-[#073833]"><Icon name="coffee" size={21} /></div>
-        <div><p className="text-lg font-bold tracking-tight">posu<span className="text-teal-300">.</span></p><p className="text-[10px] font-medium tracking-[.2em] text-teal-100/60">RETAIL CLOUD</p></div>
+        <img src="/icon-192.png" alt="Logo PosU" className="h-10 w-10 rounded-xl object-cover shadow-sm" />
+        <p title={displayStoreName} className="max-w-[164px] truncate text-sm font-bold tracking-tight text-white">{displayStoreName}</p>
       </div>
       <nav className="shrink-0 space-y-2 overflow-hidden">
         {sections.map((section) => <div key={section.label}>
