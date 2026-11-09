@@ -1,47 +1,36 @@
-import { After, Before, Given, When, Then, setDefaultTimeout } from '@cucumber/cucumber';
-import { chromium, expect } from '@playwright/test';
+import { createBdd } from 'playwright-bdd';
+import { expect } from '@playwright/test';
 
-setDefaultTimeout(40 * 1000);
+const { Given, When, Then } = createBdd();
 
-let browser;
-let page;
-
-Before(async function () {
-  browser = await chromium.launch({ headless: false });
-  const context = await browser.newContext();
-  page = await context.newPage();
-});
-
-Given('membuka halaman Sales PosU', async function () {
+Given('membuka halaman Sales PosU', async ({ page }) => {
   const targetUrl = 'https://pos-u-kasirpintar.vercel.app';
-  
+
   await page.goto(targetUrl, { waitUntil: 'domcontentloaded' });
   await page.waitForTimeout(2000);
 
-  // Cek apakah halaman memerlukan autentikasi/login
+  // Form login hanya muncul ketika sesi belum terautentikasi.
   const emailInput = page.locator('input[type="email"], input[placeholder*="email" i]');
   if (await emailInput.isVisible().catch(() => false)) {
     const email = process.env.POSU_TEST_EMAIL || 'alipmust420@gmail.com';
     const password = process.env.POSU_TEST_PASSWORD || 'password';
 
     await emailInput.fill(email);
-    
+
     const passwordInput = page.locator('input[type="password"]');
     await passwordInput.fill(password);
 
     const submitBtn = page.locator('button:has-text("Masuk ke Sistem"), button[type="submit"]');
     await submitBtn.click();
-    
-    // Tunggu proses autentikasi dan pengarahan halaman
     await page.waitForTimeout(3000);
   }
 
-  // Verifikasi elemen Keranjang di area Kasir sudah dimuat
+  // Verifikasi halaman Sales sudah dimuat, baik setelah login maupun jika sesi aktif.
   const keranjangElement = page.locator('text=/Keranjang/i').first();
   await expect(keranjangElement).toBeVisible({ timeout: 15000 });
 });
 
-When('saya menambahkan satu produk yang tersedia ke keranjang', async function () {
+When('saya menambahkan satu produk yang tersedia ke keranjang', async ({ page }) => {
   const productCard = page.locator('article').filter({
     has: page.locator('button[aria-label^="Add "]'),
   }).first();
@@ -52,7 +41,7 @@ When('saya menambahkan satu produk yang tersedia ke keranjang', async function (
   await page.waitForTimeout(500);
 });
 
-Then('jumlah item di keranjang bertambah menjadi 1', async function () {
+Then('jumlah item di keranjang bertambah menjadi 1', async ({ page }) => {
   await expect(page.getByText('Keranjang masih kosong')).not.toBeVisible({ timeout: 10000 });
 
   const itemBadge = page
@@ -62,29 +51,48 @@ Then('jumlah item di keranjang bertambah menjadi 1', async function () {
   await expect(itemBadge).toBeVisible({ timeout: 10000 });
 });
 
-Then('total bayar menampilkan nilai yang lebih besar dari nol', async function () {
-  // Targetkan tombol Bayar di area keranjang kanan bawah
+Then('total bayar menampilkan nilai yang lebih besar dari nol', async ({ page }) => {
   const payButton = page.locator('button').filter({ hasText: /Bayar/i }).first();
-  
-  // Memastikan tombol bayar terlihat dan nilainya bukan "Bayar Rp 0" lagi
+
   await expect(payButton).toBeVisible({ timeout: 10000 });
   await expect(payButton).not.toHaveText(/Bayar Rp 0/i);
 });
 
-When('saya memilih kategori {string}', async function (kategori) {
+When('saya memilih kategori {string}', async ({ page }, kategori) => {
   const categoryBtn = page.getByRole('button', { name: kategori, exact: true })
     .or(page.getByText(kategori, { exact: true }));
   await categoryBtn.first().click();
 });
 
-Then('daftar produk hanya menampilkan produk kategori Coffee', async function () {
+Then('daftar produk hanya menampilkan produk kategori Coffee', async ({ page }) => {
   await page.waitForTimeout(1000);
   const coffeeProduct = page.getByText('Coffee', { exact: false }).first();
   await expect(coffeeProduct).toBeVisible({ timeout: 10000 });
 });
 
-After(async function () {
-  if (browser) {
-    await browser.close();
-  }
+When('saya mengeklik menu {string} pada sidebar', async ({ page }, namaMenu) => {
+  const menuLink = page
+    .locator('aside a, nav a, aside button, nav button, aside div')
+    .filter({ hasText: new RegExp(`^${namaMenu}$`, 'i') })
+    .first();
+  await expect(menuLink).toBeVisible({ timeout: 10000 });
+  await menuLink.click();
+});
+
+Then('halaman berpindah ke rute menu {string}', async ({ page }, namaMenu) => {
+  const normalizedMenu = namaMenu.trim().toLocaleLowerCase();
+
+  await expect.poll(async () => {
+    const urlContainsMenu = decodeURIComponent(page.url())
+      .toLocaleLowerCase()
+      .includes(normalizedMenu);
+
+    const headerContainsMenu = await page
+      .getByRole('heading', { name: namaMenu, exact: false })
+      .first()
+      .isVisible()
+      .catch(() => false);
+
+    return urlContainsMenu || headerContainsMenu;
+  }, { timeout: 15000 }).toBe(true);
 });

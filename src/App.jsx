@@ -9,7 +9,6 @@ import ProductsView from './views/ProductsView'
 import CustomersView from './views/CustomersView'
 import OrdersView from './views/OrdersView'
 import ReportsView from './views/ReportsView'
-import ReturnsView from './views/ReturnsView'
 import DiscountsView from './views/DiscountsView'
 import UsersView from './views/UsersView'
 import SettingsView from './views/SettingsView'
@@ -23,7 +22,6 @@ const views = {
   customers: CustomersView,
   orders: OrdersView,
   reports: ReportsView,
-  returns: ReturnsView,
   discounts: DiscountsView,
   users: UsersView,
   settings: SettingsView,
@@ -105,7 +103,7 @@ export default function App() {
       <main className="mx-auto max-w-[1680px] p-4 md:p-6 xl:p-8">
         {dataNotice && <div role="status" className="mb-5 flex items-start justify-between gap-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs text-amber-800"><span>{dataNotice}</span><button aria-label="Dismiss" onClick={() => setDataNotice('')} className="font-bold">×</button></div>}
         {dataLoading && <div className="mb-4 h-1 overflow-hidden rounded-full bg-teal-100"><div className="h-full w-1/3 animate-pulse rounded-full bg-teal-600"/></div>}
-        {activeMenu === 'sales' ? <div className="grid items-start gap-5 xl:grid-cols-12"><SalesView products={currentProducts} transactions={currentTransactions}/><CurrentSale user={session.user} onOrderCreated={addTransaction} onStockUpdated={updateProductStock}/></div> : activeMenu === 'dashboard' ? <View products={currentProducts} transactions={currentTransactions}/> : activeMenu === 'products' ? <ProductsView products={currentProducts} userId={session.user.id} onSave={saveProduct} onDelete={deleteProduct}/> : activeMenu === 'customers' ? <CustomersView userId={session.user.id}/> : activeMenu === 'orders' ? <OrdersView userId={session.user.id}/> : activeMenu === 'reports' ? <ReportsView userId={session.user.id}/> : activeMenu === 'returns' ? <ReturnsView userId={session.user.id} transactions={currentTransactions}/> : activeMenu === 'discounts' ? <DiscountsView/> : activeMenu === 'users' ? <UsersView/> : <View />}
+        {activeMenu === 'sales' ? <div className="grid items-start gap-5 xl:grid-cols-12"><SalesView products={currentProducts} transactions={currentTransactions}/><CurrentSale user={session.user} onOrderCreated={addTransaction} onStockUpdated={updateProductStock}/></div> : activeMenu === 'dashboard' ? <View products={currentProducts} transactions={currentTransactions}/> : activeMenu === 'products' ? <ProductsView products={currentProducts} userId={session.user.id} onSave={saveProduct} onDelete={deleteProduct}/> : activeMenu === 'customers' ? <CustomersView userId={session.user.id}/> : activeMenu === 'orders' ? <OrdersView userId={session.user.id}/> : activeMenu === 'reports' ? <ReportsView userId={session.user.id}/> : activeMenu === 'discounts' ? <DiscountsView/> : activeMenu === 'users' ? <UsersView/> : <View />}
       </main>
       <footer className="px-7 pb-5 pt-2 text-center text-[10px] font-medium tracking-wide text-slate-400">PosU Retail Cloud · Sistem kasir untuk bisnis yang lebih rapi</footer>
     </div>
