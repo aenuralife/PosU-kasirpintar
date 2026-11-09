@@ -1,16 +1,16 @@
 import { useEffect, useState } from 'react'
 import { useUIStore } from '../store/useUIStore'
 import { supabase } from '../supabaseClient'
-import { Bell, LayoutDashboard, ShoppingCart, Package, UsersRound, ClipboardList, ChartNoAxesCombined, RotateCcw, Tag, Users, Settings, LogOut, Plus, Trash2, Minus, ArrowRight, Menu, Search, X, Pencil, Check, Printer } from 'lucide-react'
+import { Bell, LayoutDashboard, ShoppingCart, Package, UsersRound, ClipboardList, ChartNoAxesCombined, Tag, Users, Settings, LogOut, Plus, Trash2, Minus, ArrowRight, Menu, Search, X, Pencil, Check, Printer } from 'lucide-react'
 
 const sections = [
   { label: 'MAIN MENU', items: [['Dashboard', 'dashboard'], ['Sales', 'sales'], ['Products', 'products'], ['Customers', 'customers'], ['Orders', 'orders']] },
-  { label: 'MANAGEMENT', items: [['Reports', 'reports'], ['Returns', 'returns'], ['Discounts', 'discounts'], ['Users', 'users'], ['Settings', 'settings']] },
+  { label: 'MANAGEMENT', items: [['Reports', 'reports'], ['Discounts', 'discounts'], ['Users', 'users'], ['Settings', 'settings']] },
 ]
 
 const icons = {
   dashboard: LayoutDashboard, sales: ShoppingCart, products: Package, customers: UsersRound,
-  orders: ClipboardList, reports: ChartNoAxesCombined, returns: RotateCcw, discounts: Tag,
+  orders: ClipboardList, reports: ChartNoAxesCombined, discounts: Tag,
   users: Users, settings: Settings, logout: LogOut,
   plus: Plus, trash: Trash2, minus: Minus, arrow: ArrowRight, menu: Menu, search: Search, bell: Bell, close: X, edit: Pencil, check: Check, print: Printer,
 }
