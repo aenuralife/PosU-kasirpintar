@@ -12,6 +12,6 @@ export default defineConfig({
   use: {
     video: 'on',
     screenshot: 'on',
-    headless: false,
+    headless: process.env.CI ? true : false,
   },
 });
