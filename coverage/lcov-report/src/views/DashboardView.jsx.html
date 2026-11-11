@@ -1,0 +1,388 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for src/views/DashboardView.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/views</a> DashboardView.jsx</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">75% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>45/60</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">64.86% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>48/74</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">76.19% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>16/21</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">79.59% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>39/49</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line medium'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">121x</span>
+<span class="cline-any cline-yes">118x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">91x</span>
+<span class="cline-any cline-yes">91x</span>
+<span class="cline-any cline-yes">91x</span>
+<span class="cline-any cline-yes">91x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">91x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">91x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">91x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useEffect, useState } from 'react'
+import { Icon } from '../components/Sidebar'
+import { supabase } from '../supabaseClient'
+&nbsp;
+const idr = (amount) =&gt; new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(amount || 0)
+const dateKey = (date) =&gt; `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`
+&nbsp;
+export default function DashboardView({ transactions = [], products = [] }) {
+  const [todayTransactions, setTodayTransactions] = useState([])
+  const [latestProducts, setLatestProducts] = useState(null)
+  const [dashboardLoading, setDashboardLoading] = useState(true)
+  const [dashboardError, setDashboardError] = useState('')
+&nbsp;
+  useEffect(() =&gt; {
+    let active = true
+    const now = new Date()
+    const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+    const startOfTomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1)
+&nbsp;
+    const loadDashboardData = async () =&gt; {
+      const [transactionsResult, productsResult] = await Promise.all([
+        supabase
+          .from('transactions_final')
+          .select('*')
+          .gte('create_at', startOfToday.toISOString())
+          .lt('create_at', startOfTomorrow.toISOString())
+          .order('create_at', { ascending: false }),
+        supabase
+          .from('products')
+          .select('*')
+          .order('created_at', { ascending: false })
+          .limit(4),
+      ])
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (!active) <span class="cstat-no" title="statement not covered" >return</span></span>
+<span class="cstat-no" title="statement not covered" >      if (transactionsResult.error) {</span>
+<span class="cstat-no" title="statement not covered" >        setDashboardError(transactionsResult.error.message)</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        setTodayTransactions(transactionsResult.data || [])</span>
+      }
+<span class="cstat-no" title="statement not covered" >      if (productsResult.error) {</span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >        setDashboardError((c</span>urrent) =&gt; <span class="cstat-no" title="statement not covered" >current || productsResult.error.message)</span></span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        setLatestProducts((productsResult.data || []).<span class="fstat-no" title="function not covered" >map((p</span>roduct) =&gt; (<span class="cstat-no" title="statement not covered" >{</span></span>
+          ...product,
+          imageUrl: product.image || product.imageUrl,
+        })))
+      }
+<span class="cstat-no" title="statement not covered" >      setDashboardLoading(false)</span>
+    }
+&nbsp;
+    loadDashboardData().catch((error) =&gt; {
+      if (!active) return
+      setDashboardError(error.message || <span class="branch-1 cbranch-no" title="branch not covered" >'Data dasbor gagal dimuat.')</span>
+      setDashboardLoading(false)
+    })
+&nbsp;
+    return () =&gt; { active = false }
+  }, [])
+&nbsp;
+  const today = dateKey(new Date())
+  const todayOrders = todayTransactions.<span class="fstat-no" title="function not covered" >filter((t</span>x) =&gt; {
+    const date = <span class="cstat-no" title="statement not covered" >tx.create_at</span>
+<span class="cstat-no" title="statement not covered" >    return date &amp;&amp; dateKey(new Date(date)) === today</span>
+  })
+  const sales = todayOrders.<span class="fstat-no" title="function not covered" >reduce((s</span>um, tx) =&gt; <span class="cstat-no" title="statement not covered" >sum + Number(tx.grand_total ?? 0), 0</span>)
+  const customers = new Set(todayOrders.<span class="fstat-no" title="function not covered" >map((t</span>x) =&gt; <span class="cstat-no" title="statement not covered" >tx.customer_id || tx.customer_name)</span>.filter(Boolean)).size
+  const metrics = [
+    { label: 'Penjualan hari ini', value: idr(sales), icon: 'reports', tint: 'bg-teal-50 text-teal-700' },
+    { label: 'Transaksi', value: todayOrders.length, icon: 'orders', tint: 'bg-blue-50 text-blue-700' },
+    { label: 'Pelanggan', value: customers, icon: 'customers', tint: 'bg-violet-50 text-violet-700' },
+    { label: 'Rata-rata transaksi', value: idr(todayOrders.length ? <span class="branch-0 cbranch-no" title="branch not covered" >sales / todayOrders.length : 0</span>), icon: 'sales', tint: 'bg-orange-50 text-orange-700' },
+  ]
+  const week = Array.from({ length: 7 }, (_, index) =&gt; {
+    const date = new Date()
+    date.setDate(date.getDate() - (6 - index))
+    const key = dateKey(date)
+    const amount = transactions.filter((tx) =&gt; {
+      const timestamp = tx.timestamp || tx.create_at
+      return timestamp &amp;&amp; dateKey(new Date(timestamp)) === key
+    }).reduce((sum, tx) =&gt; sum + Number(tx.grand_total ?? tx.grandTotal ?? 0), 0)
+    return { day: date.toLocaleDateString('id-ID', { weekday: 'short' }), amount }
+  })
+  const displayProducts = latestProducts ?? products.slice(0, 4)
+  const maxAmount = Math.max(...week.map((item) =&gt; item.amount), 1)
+&nbsp;
+  return &lt;div className="space-y-6"&gt;
+    &lt;div className="flex flex-wrap items-end justify-between gap-4"&gt;&lt;div&gt;&lt;p className="text-[11px] font-bold uppercase tracking-[.18em] text-teal-700"&gt;Ringkasan toko&lt;/p&gt;&lt;h2 className="mt-1 text-3xl font-bold tracking-tight text-slate-950"&gt;Dashboard&lt;/h2&gt;&lt;p className="mt-1 text-sm text-slate-500"&gt;Pantau performa toko hari ini.&lt;/p&gt;&lt;/div&gt;&lt;span className="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-xs font-semibold text-slate-600 shadow-sm"&gt;{new Date().toLocaleDateString('id-ID', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}&lt;/span&gt;&lt;/div&gt;
+&nbsp;
+    {dashboardError &amp;&amp; &lt;p role="alert" className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs text-amber-800"&gt;Sebagian data dasbor gagal dimuat: {dashboardError}&lt;/p&gt;}
+    &lt;div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4"&gt;{metrics.map((metric) =&gt; &lt;article key={metric.label} className="group rounded-2xl border border-slate-200/80 bg-white p-5 shadow-[0_8px_30px_rgba(15,23,42,.035)] transition hover:-translate-y-0.5 hover:shadow-[0_14px_36px_rgba(15,23,42,.08)]"&gt;&lt;div className="flex items-center justify-between"&gt;&lt;span className="text-xs font-semibold text-slate-500"&gt;{metric.label}&lt;/span&gt;&lt;span className={`grid h-10 w-10 place-items-center rounded-xl ${metric.tint}`}&gt;&lt;Icon name={metric.icon} size={18}/&gt;&lt;/span&gt;&lt;/div&gt;&lt;p className="mt-4 text-2xl font-bold tracking-tight text-slate-950"&gt;{dashboardLoading ? 'Memuat…' : metric.value}&lt;/p&gt;&lt;p className="mt-2 text-[10px] text-slate-400"&gt;{dashboardLoading ? 'Mengambil data terbaru' : 'Berdasarkan transaksi hari ini'}&lt;/p&gt;&lt;/article&gt;)}&lt;/div&gt;
+&nbsp;
+    &lt;div className="grid gap-5 xl:grid-cols-[1.45fr_1fr]"&gt;
+      &lt;section className="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-[0_8px_30px_rgba(15,23,42,.035)] md:p-6"&gt;&lt;div className="flex items-start justify-between"&gt;&lt;div&gt;&lt;p className="text-[11px] font-bold uppercase tracking-[.14em] text-teal-700"&gt;Tren mingguan&lt;/p&gt;&lt;h3 className="mt-1 text-base font-bold text-slate-900"&gt;Penjualan 7 hari terakhir&lt;/h3&gt;&lt;/div&gt;&lt;span className="rounded-lg bg-slate-50 px-3 py-2 text-[10px] font-semibold text-slate-500"&gt;IDR&lt;/span&gt;&lt;/div&gt;&lt;div className="mt-7 flex h-48 items-end gap-3 border-b border-l border-slate-100 px-3 pb-2"&gt;{week.map((item, index) =&gt; &lt;div key={`${item.day}-${index}`} title={`${item.day}: ${idr(item.amount)}`} className="group relative flex h-full flex-1 items-end"&gt;&lt;div style={{ height: `${item.amount ? <span class="branch-0 cbranch-no" title="branch not covered" >Math.max((item.amount / maxAmount) * 100, 4) : 2</span>}%` }} className={`w-full rounded-t-lg transition-all duration-300 ${index === week.length - 1 ? 'bg-teal-600' : 'bg-teal-100 group-hover:bg-teal-300'}`}/&gt;&lt;/div&gt;)}&lt;/div&gt;&lt;div className="mt-3 flex justify-between px-1 text-[10px] font-medium text-slate-400"&gt;{week.map((item, index) =&gt; &lt;span key={`${item.day}-${index}`}&gt;{item.day}&lt;/span&gt;)}&lt;/div&gt;&lt;/section&gt;
+&nbsp;
+      &lt;section className="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-[0_8px_30px_rgba(15,23,42,.035)] md:p-6"&gt;&lt;div className="flex items-center justify-between"&gt;&lt;div&gt;&lt;p className="text-[11px] font-bold uppercase tracking-[.14em] text-teal-700"&gt;Katalog&lt;/p&gt;&lt;h3 className="mt-1 text-base font-bold text-slate-900"&gt;Produk terbaru&lt;/h3&gt;&lt;/div&gt;&lt;span className="rounded-full bg-teal-50 px-3 py-1.5 text-[10px] font-bold text-teal-800"&gt;{dashboardLoading ? '…' : displayProducts.length} produk&lt;/span&gt;&lt;/div&gt;&lt;div className="mt-5 space-y-3"&gt;{displayProducts.map((product) =&gt; &lt;div key={product.id} className="flex items-center gap-3 rounded-xl p-2 transition hover:bg-slate-50"&gt;&lt;img src={product.imageUrl || product.image || 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&amp;fit=crop&amp;w=100&amp;q=80'} alt="" className="h-11 w-11 rounded-xl bg-slate-100 object-cover"/&gt;&lt;div className="min-w-0 flex-1"&gt;&lt;p className="truncate text-xs font-semibold text-slate-800"&gt;{product.name}&lt;/p&gt;&lt;p className="mt-1 text-[10px] text-slate-400"&gt;{product.category || <span class="branch-1 cbranch-no" title="branch not covered" >'Produk'} </span>· Stok {product.stock ?? <span class="branch-1 cbranch-no" title="branch not covered" >0}&lt;/p&gt;</span>&lt;/div&gt;&lt;span className="text-xs font-bold text-slate-700"&gt;{idr(product.price)}&lt;/span&gt;&lt;/div&gt;)}&lt;/div&gt;{dashboardLoading ? &lt;p className="py-8 text-center text-xs text-slate-400"&gt;Memuat produk…&lt;/p&gt; : !displayProducts.length &amp;&amp; &lt;p className="py-8 text-center text-xs text-slate-400"&gt;Belum ada produk.&lt;/p&gt;}&lt;/section&gt;
+    &lt;/div&gt;
+&nbsp;
+    &lt;section className="overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-[0_8px_30px_rgba(15,23,42,.035)]"&gt;&lt;div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 px-5 py-4 md:px-6"&gt;&lt;div&gt;&lt;p className="text-[11px] font-bold uppercase tracking-[.14em] text-teal-700"&gt;Aktivitas&lt;/p&gt;&lt;h3 className="mt-1 text-base font-bold text-slate-900"&gt;Transaksi terbaru&lt;/h3&gt;&lt;/div&gt;&lt;span className="text-xs font-semibold text-slate-500"&gt;{transactions.length} transaksi&lt;/span&gt;&lt;/div&gt;&lt;div className="overflow-x-auto"&gt;&lt;table className="w-full min-w-[540px] text-left text-xs"&gt;&lt;thead className="bg-slate-50/80 text-[10px] uppercase tracking-[.12em] text-slate-400"&gt;&lt;tr&gt;&lt;th className="px-5 py-3 font-semibold md:px-6"&gt;ID transaksi&lt;/th&gt;&lt;th className="px-5 py-3 font-semibold"&gt;Tanggal&lt;/th&gt;&lt;th className="px-5 py-3 font-semibold"&gt;Pembayaran&lt;/th&gt;&lt;th className="px-5 py-3 font-semibold"&gt;Total&lt;/th&gt;&lt;th className="px-5 py-3 font-semibold"&gt;Status&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;{transactions.slice(0, 5).map((tx) =&gt; &lt;tr key={tx.id} className="border-t border-slate-100 transition hover:bg-slate-50/70"&gt;&lt;td className="px-5 py-3.5 font-semibold text-slate-700 md:px-6"&gt;#{String(tx.id).slice(-8)}&lt;/td&gt;&lt;td className="px-5 py-3.5 text-slate-500"&gt;{tx.timestamp || tx.create_at ? new Date(tx.timestamp || tx.create_at).toLocaleDateString('id-ID') : <span class="branch-1 cbranch-no" title="branch not covered" >'—'}&lt;/td&gt;</span>&lt;td className="px-5 py-3.5 capitalize text-slate-500"&gt;{tx.payment_method || 'Cash'}&lt;/td&gt;&lt;td className="px-5 py-3.5 font-bold text-slate-800"&gt;{idr(tx.grand_total ?? tx.grandTotal)}&lt;/td&gt;&lt;td className="px-5 py-3.5"&gt;&lt;span className="rounded-full bg-emerald-50 px-2.5 py-1 text-[10px] font-semibold text-emerald-700"&gt;Selesai&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;)}&lt;/tbody&gt;&lt;/table&gt;{!transactions.length &amp;&amp; &lt;p className="py-9 text-center text-xs text-slate-400"&gt;Belum ada transaksi tercatat.&lt;/p&gt;}&lt;/div&gt;&lt;/section&gt;
+  &lt;/div&gt;
+}
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-11-11T04:31:18.183Z
+            </div>
+        <script src="../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
+    </body>
+</html>
+    

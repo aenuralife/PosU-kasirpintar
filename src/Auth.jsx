@@ -80,10 +80,11 @@ export default function Auth() {
           {/* Input Khusus Pendaftaran */}
           {isSignUp && (
             <div>
-              <label className="block text-xs font-bold text-slate-700 mb-1">
+              <label htmlFor="fullName" className="block text-xs font-bold text-slate-700 mb-1">
                 Nama Usaha / Kasir
               </label>
               <input
+                id="fullName"
                 type="text"
                 required
                 placeholder="Toko Jaya Abadi"
@@ -93,12 +94,13 @@ export default function Auth() {
               />
             </div>
           )}
-
+          
           <div>
-            <label className="block text-xs font-bold text-slate-700 mb-1">
+            <label htmlFor="email" className="block text-xs font-bold text-slate-700 mb-1">
               Email
             </label>
             <input
+              id="email"
               type="email"
               required
               placeholder="kasir@tokoku.com"
@@ -107,12 +109,13 @@ export default function Auth() {
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
-
+          
           <div>
-            <label className="block text-xs font-bold text-slate-700 mb-1">
+            <label htmlFor="password" className="block text-xs font-bold text-slate-700 mb-1">
               Password
             </label>
             <input
+              id="password"
               type="password"
               required
               placeholder="••••••••"
@@ -121,14 +124,15 @@ export default function Auth() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-
+          
           {/* Input Konfirmasi Password untuk Pendaftaran */}
           {isSignUp && (
             <div>
-              <label className="block text-xs font-bold text-slate-700 mb-1">
+              <label htmlFor="confirmPassword" className="block text-xs font-bold text-slate-700 mb-1">
                 Ulangi Password
               </label>
               <input
+                id="confirmPassword"
                 type="password"
                 required
                 placeholder="••••••••"
@@ -138,12 +142,13 @@ export default function Auth() {
               />
             </div>
           )}
-
+          
           {/* Opsi Ingat Saya (Centang Keamanan Login) */}
           {!isSignUp && (
             <div className="flex items-center justify-between py-1">
-              <label className="flex items-center space-x-2 text-xs text-slate-600 cursor-pointer">
+              <label htmlFor="rememberMe" className="flex items-center space-x-2 text-xs text-slate-600 cursor-pointer">
                 <input
+                  id="rememberMe"
                   type="checkbox"
                   checked={rememberMe}
                   onChange={(e) => setRememberMe(e.target.checked)}
@@ -153,7 +158,7 @@ export default function Auth() {
               </label>
             </div>
           )}
-
+          
           <button
             type="submit"
             disabled={loading}
@@ -162,7 +167,7 @@ export default function Auth() {
             {loading ? 'Memproses...' : isSignUp ? 'Daftar Akun Baru' : 'Masuk ke Sistem'}
           </button>
         </form>
-
+        
         {/* Beralih Mode Login/Daftar */}
         <div className="mt-6 text-center text-xs text-slate-500">
           {isSignUp ? (
@@ -195,7 +200,6 @@ export default function Auth() {
             </p>
           )}
         </div>
-
       </div>
     </div>
   );

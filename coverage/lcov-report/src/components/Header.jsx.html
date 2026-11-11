@@ -1,0 +1,145 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for src/components/Header.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/components</a> Header.jsx</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">90% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>9/10</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">80% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>4/5</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">85.71% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>6/7</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">85.71% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>6/7</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">100x</span>
+<span class="cline-any cline-yes">100x</span>
+<span class="cline-any cline-yes">100x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Icon } from './Sidebar'
+import { useUIStore } from '../store/useUIStore'
+&nbsp;
+export default function Header({ user, onMenuClick }) {
+  const activeMenu = useUIStore((state) =&gt; state.activeMenu)
+  const searchQuery = useUIStore((state) =&gt; state.searchQuery)
+  const setSearchQuery = useUIStore((state) =&gt; state.setSearchQuery)
+  return &lt;header className="sticky top-0 z-30 flex h-[72px] items-center justify-between gap-3 border-b border-slate-200/70 bg-white/85 px-4 shadow-[0_4px_20px_rgba(15,23,42,.025)] backdrop-blur-xl md:px-7"&gt;
+    &lt;div className="flex min-w-0 items-center gap-3"&gt;
+      &lt;button aria-label="Open navigation" onClick={onMenuClick} className="rounded-xl p-2 text-slate-600 transition hover:bg-slate-100 lg:hidden"&gt;&lt;Icon name="menu" /&gt;&lt;/button&gt;
+      &lt;div className="min-w-0"&gt;&lt;p className="truncate text-[10px] font-semibold uppercase tracking-[.16em] text-slate-400"&gt;PosU &lt;span className="mx-1 text-slate-300"&gt;/&lt;/span&gt; &lt;span className="capitalize text-teal-700"&gt;{activeMenu}&lt;/span&gt;&lt;/p&gt;&lt;h1 className="mt-0.5 truncate text-lg font-bold capitalize tracking-tight text-slate-900"&gt;{activeMenu === 'sales' ? 'Point of Sale' : activeMenu}&lt;/h1&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div className="flex items-center gap-2 md:gap-3"&gt;
+      &lt;label className="hidden h-10 w-52 items-center gap-2 rounded-xl border border-slate-200 bg-slate-50/80 px-3 text-slate-400 transition focus-within:border-teal-400 focus-within:bg-white focus-within:ring-4 focus-within:ring-teal-500/10 md:flex xl:w-72"&gt;&lt;Icon name="search" size={17} /&gt;&lt;input value={searchQuery} <span class="fstat-no" title="function not covered" >onChange={(e</span>vent) =&gt; <span class="cstat-no" title="statement not covered" >setSearchQuery(event.target.value)} p</span>laceholder="Cari produk..." className="w-full bg-transparent text-xs text-slate-700 outline-none placeholder:text-slate-400" /&gt;&lt;/label&gt;
+      &lt;button aria-label="Notifications" className="relative grid h-10 w-10 place-items-center rounded-xl border border-slate-200 text-slate-600 transition hover:border-teal-200 hover:bg-teal-50"&gt;&lt;Icon name="bell" size={18} /&gt;&lt;span className="absolute right-2 top-2 h-2 w-2 rounded-full border-2 border-white bg-rose-500" /&gt;&lt;/button&gt;
+      &lt;button title="Open profile settings" onClick={() =&gt; useUIStore.getState().setActiveMenu('settings')} className="grid h-10 w-10 place-items-center rounded-xl bg-orange-100 text-xs font-bold text-orange-800 ring-1 ring-orange-200/70 transition hover:ring-2 hover:ring-teal-200"&gt;{(user?.user_metadata?.full_name || user?.email || <span class="branch-2 cbranch-no" title="branch not covered" >'A')</span>.slice(0, 1).toUpperCase()}&lt;/button&gt;
+      &lt;button onClick={() =&gt; useUIStore.getState().setActiveMenu('sales')} className="hidden h-10 items-center gap-2 rounded-xl bg-[#0d766e] px-4 text-xs font-semibold text-white shadow-sm shadow-teal-900/15 transition hover:bg-[#095d57] sm:flex"&gt;&lt;Icon name="sales" size={16} /&gt; Transaksi baru&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+}
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-11-11T04:31:18.183Z
+            </div>
+        <script src="../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
+    </body>
+</html>
+    

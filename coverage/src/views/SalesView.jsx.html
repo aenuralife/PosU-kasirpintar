@@ -1,0 +1,211 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for src/views/SalesView.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/views</a> SalesView.jsx</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">85.36% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>35/41</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">67.5% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>27/40</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">73.68% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>14/19</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">95.83% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>23/24</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">82x</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-yes">111x</span>
+<span class="cline-any cline-yes">111x</span>
+<span class="cline-any cline-yes">113x</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">148x</span>
+<span class="cline-any cline-yes">185x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useMemo, useState } from 'react'
+import { useCartStore } from '../store/useCartStore'
+import { useUIStore } from '../store/useUIStore'
+import { Icon } from '../components/Sidebar'
+&nbsp;
+const categories = ['All', 'Coffee', 'Food', 'Drinks', 'Desserts']
+const idr = (amount) =&gt; new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(amount || 0)
+const dateKey = (date) =&gt; `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`
+const categoryMatch = (product, category) =&gt; {
+  <span class="missing-if-branch" title="else path not taken" >E</span>if (category === 'All') return true
+  const value = <span class="cstat-no" title="statement not covered" >`${product.category || ''} ${product.name || <span class="branch-1 cbranch-no" title="branch not covered" >''}`.t</span>oLowerCase()</span>
+  const words = { Coffee: ['coffee', 'kopi', 'espresso'], Food: ['food', 'makanan', 'nasi', 'roti'], Drinks: ['drink', 'minuman', 'teh', 'juice', 'jus'], Desserts: ['dessert', 'cake', 'kue', 'pudding', 'donat'] }
+  return words[category].<span class="fstat-no" title="function not covered" >some((w</span>ord) =&gt; <span class="cstat-no" title="statement not covered" >value.includes(word))</span>
+}
+&nbsp;
+export default function SalesView({ products = [], transactions = [] }) {
+  const [category, setCategory] = useState('All')
+  const addProduct = useCartStore((state) =&gt; state.addProduct)
+  const cartItems = useCartStore((state) =&gt; state.items)
+  const search = useUIStore((state) =&gt; state.searchQuery)
+  const today = dateKey(new Date())
+  const todaysOrders = transactions.filter((transaction) =&gt; {
+    const timestamp = transaction.timestamp || transaction.create_at
+    return timestamp &amp;&amp; dateKey(new Date(timestamp)) === today
+  })
+  const sales = todaysOrders.<span class="fstat-no" title="function not covered" >reduce((s</span>um, transaction) =&gt; <span class="cstat-no" title="statement not covered" >sum + Number(transaction.grand_total ?? transaction.grandTotal ?? 0), 0</span>)
+  const customerCount = new Set(todaysOrders.<span class="fstat-no" title="function not covered" >map((t</span>ransaction) =&gt; <span class="cstat-no" title="statement not covered" >transaction.customer_id || transaction.customer_name)</span>.filter(Boolean)).size
+  const metrics = [
+    { label: 'Total Sales', value: idr(sales), icon: 'reports', color: 'bg-teal-50 text-teal-700' },
+    { label: 'Orders', value: todaysOrders.length, icon: 'orders', color: 'bg-blue-50 text-blue-700' },
+    { label: 'Customers', value: customerCount, icon: 'customers', color: 'bg-violet-50 text-violet-700' },
+    { label: 'Avg. Order Value', value: idr(todaysOrders.length ? <span class="branch-0 cbranch-no" title="branch not covered" >sales / todaysOrders.length : 0</span>), icon: 'sales', color: 'bg-orange-50 text-orange-700' },
+  ]
+  const visibleProducts = useMemo(() =&gt; products.filter((product) =&gt; categoryMatch(product, category) &amp;&amp; product.name?.toLowerCase().includes(search.toLowerCase())), [products, category, search])
+&nbsp;
+  return &lt;section className="min-w-0 space-y-6 xl:col-span-8 xl:h-[calc(100vh-120px)] xl:overflow-y-auto xl:overscroll-contain xl:pr-2 xl:[scrollbar-width:thin]"&gt;
+    &lt;div className="flex flex-wrap items-end justify-between gap-3"&gt;&lt;div&gt;&lt;p className="text-xs font-medium text-teal-700"&gt;{new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }).toUpperCase()}&lt;/p&gt;&lt;h2 className="mt-1 text-2xl font-bold tracking-tight text-slate-900"&gt;Good morning, ready to serve?&lt;/h2&gt;&lt;p className="mt-1 text-sm text-slate-500"&gt;Select products and build an order.&lt;/p&gt;&lt;/div&gt;&lt;div className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-xs text-slate-500"&gt;&lt;span className="mr-2 inline-block h-2 w-2 rounded-full bg-emerald-500"/&gt;Register 01 · Online&lt;/div&gt;&lt;/div&gt;
+    &lt;div className="grid grid-cols-2 gap-3 2xl:grid-cols-4"&gt;{metrics.map((metric) =&gt; &lt;article key={metric.label} className="rounded-2xl border border-slate-200/80 bg-white p-4 shadow-[0_6px_24px_rgba(15,23,42,.03)] transition hover:shadow-md"&gt;&lt;div className="flex items-center justify-between"&gt;&lt;span className="text-[11px] font-semibold text-slate-500"&gt;{metric.label}&lt;/span&gt;&lt;span className={`grid h-9 w-9 place-items-center rounded-xl ${metric.color}`}&gt;&lt;Icon name={metric.icon} size={17}/&gt;&lt;/span&gt;&lt;/div&gt;&lt;p className="mt-3 truncate text-lg font-bold tracking-tight text-slate-950"&gt;{metric.value}&lt;/p&gt;&lt;/article&gt;)}&lt;/div&gt;
+    &lt;div className="flex gap-2 overflow-x-auto pb-1"&gt;{categories.map((item) =&gt; &lt;button key={item} onClick={() =&gt; setCategory(item)} className={`shrink-0 rounded-xl px-4 py-2 text-xs font-semibold transition ${category === item ? 'bg-[#0d766e] text-white shadow-md shadow-teal-900/10' : 'border border-slate-200 bg-white text-slate-500 hover:border-teal-200 hover:text-teal-800'}`}&gt;{item}&lt;/button&gt;)}&lt;/div&gt;
+    {visibleProducts.length ? &lt;div className="grid grid-cols-2 gap-3 sm:grid-cols-3 2xl:grid-cols-4"&gt;{visibleProducts.map((product, index) =&gt; { const stock = Number(product.stock ?? <span class="branch-1 cbranch-no" title="branch not covered" >0)</span>; const inCart = cartItems.<span class="fstat-no" title="function not covered" >find((i</span>tem) =&gt; <span class="cstat-no" title="statement not covered" >String(item.id) === String(product.id))</span>?.qty || 0; const unavailable = stock &lt;= 0 || inCart &gt;= stock; return &lt;article key={product.id} className="group overflow-hidden rounded-2xl border border-slate-200 bg-white transition hover:-translate-y-0.5 hover:border-teal-200 hover:shadow-lg hover:shadow-slate-900/5"&gt;&lt;div className="relative aspect-[1.35] overflow-hidden bg-slate-100"&gt;&lt;img src={product.imageUrl || product.image || `https://images.unsplash.com/photo-${['1509042239860-f550ce710b93','1555939594-58d7cb561ad1','1556679343-c7306c1976bc','1578985545062-69928b1d9587'][index % 4]}?auto=format&amp;fit=crop&amp;w=500&amp;q=80`} alt={product.name} className="h-full w-full object-cover transition duration-500 group-hover:scale-105"/&gt;&lt;span className="absolute left-2.5 top-2.5 rounded-lg bg-white/90 px-2 py-1 text-[9px] font-semibold text-slate-600 backdrop-blur"&gt;{product.category || <span class="branch-1 cbranch-no" title="branch not covered" >'Popular'}&lt;/span&gt;</span>&lt;button disabled={unavailable} aria-label={`Add ${product.name}`} <span class="fstat-no" title="function not covered" >onClick={() =&gt; <span class="cstat-no" title="statement not covered" >a</span>ddProduct(product)} c</span>lassName="absolute bottom-2.5 right-2.5 grid h-9 w-9 place-items-center rounded-xl bg-[#0d766e] text-white shadow-lg transition hover:scale-105 hover:bg-[#095d57] disabled:cursor-not-allowed disabled:bg-slate-400"&gt;&lt;Icon name="plus" size={18}/&gt;&lt;/button&gt;&lt;/div&gt;&lt;div className="p-3"&gt;&lt;h3 className="truncate text-xs font-semibold text-slate-800"&gt;{product.name}&lt;/h3&gt;&lt;div className="mt-2 flex items-center justify-between"&gt;&lt;span className="text-xs font-bold text-[#0d766e]"&gt;{idr(product.price)}&lt;/span&gt;&lt;span className={`text-[10px] ${stock &lt;= 5 ? <span class="branch-0 cbranch-no" title="branch not covered" >'font-semibold text-rose-600' : '</span>text-slate-400'}`}&gt;Stok: {stock}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/article&gt;})}&lt;/div&gt; : &lt;div className="grid min-h-56 place-items-center rounded-2xl border border-dashed border-slate-300 bg-white text-center"&gt;&lt;div&gt;&lt;div className="mx-auto mb-3 grid h-12 w-12 place-items-center rounded-xl bg-slate-100 text-slate-400"&gt;&lt;Icon name="products"/&gt;&lt;/div&gt;&lt;p className="text-sm font-semibold text-slate-700"&gt;No products found&lt;/p&gt;&lt;p className="mt-1 text-xs text-slate-400"&gt;Try another category or search term.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;}
+  &lt;/section&gt;
+}
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-11-11T04:31:18.132Z
+            </div>
+        <script src="../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
+    </body>
+</html>
+    

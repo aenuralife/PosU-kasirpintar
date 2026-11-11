@@ -1,0 +1,490 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for src/components/CurrentSale.jsx</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/components</a> CurrentSale.jsx</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">89.33% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>67/75</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">93.1% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>54/58</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">84% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>21/25</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">91.66% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>55/60</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">143x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">83x</span>
+<span class="cline-any cline-yes">83x</span>
+<span class="cline-any cline-yes">83x</span>
+<span class="cline-any cline-yes">83x</span>
+<span class="cline-any cline-yes">83x</span>
+<span class="cline-any cline-yes">83x</span>
+<span class="cline-any cline-yes">83x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { useEffect, useState } from 'react'
+import { supabase } from '../supabaseClient'
+import { useCartStore } from '../store/useCartStore'
+import { Icon } from './Sidebar'
+&nbsp;
+const idr = (amount) =&gt; new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(Number(amount) || 0)
+&nbsp;
+export default function CurrentSale({ user, onOrderCreated, onStockUpdated }) {
+  const items = useCartStore((state) =&gt; state.items)
+  const updateQuantity = useCartStore((state) =&gt; state.updateQuantity)
+  const removeItem = useCartStore((state) =&gt; state.removeItem)
+  const clearCart = useCartStore((state) =&gt; state.clearCart)
+  const subtotal = useCartStore((state) =&gt; state.getSubtotal())
+  const tax = useCartStore((state) =&gt; state.getTax())
+  const total = useCartStore((state) =&gt; state.getTotal())
+  const [paying, setPaying] = useState(false)
+  const [method, setMethod] = useState('cash')
+  const [notice, setNotice] = useState('')
+  const [receiptData, setReceiptData] = useState(null)
+  const [store, setStore] = useState(null)
+&nbsp;
+  useEffect(() =&gt; {
+    let active = true
+    supabase.from('store_settings').select('store_name, address, phone, receipt_footer').limit(1).maybeSingle()
+      .then(({ data }) =&gt; { if (active &amp;&amp; data) setStore(data) })
+      .<span class="fstat-no" title="function not covered" >catch(() =&gt; {</span>})
+    return () =&gt; { active = false }
+  }, [])
+&nbsp;
+  const checkout = async () =&gt; {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!items.length || paying || receiptData) <span class="cstat-no" title="statement not covered" >return</span>
+    setPaying(true)
+    setNotice('')
+    const createdAt = new Date().toISOString()
+    const transaction = {
+      id: `TRX-${Date.now()}`,
+      date: new Date().toLocaleString('id-ID'),
+      timestamp: createdAt,
+      items: items.map((item) =&gt; ({ ...item })),
+      subtotal,
+      grand_total: total,
+      payment_method: method,
+      cash: total,
+      change: 0,
+      user_id: user?.id,
+      create_at: createdAt,
+    }
+&nbsp;
+    try {
+      const { error: transactionError } = await supabase.from('transactions_final').insert([transaction])
+      if (transactionError) throw transactionError
+&nbsp;
+      const stockWarnings = []
+      for (const item of transaction.items) {
+        const { data: currentProduct, error: readError } = await supabase
+          .from('products').select('id, stock').eq('id', item.id).maybeSingle()
+        if (readError || !currentProduct) {
+          stockWarnings.push(`${item.name}: stok tidak dapat dibaca`)
+          continue
+        }
+        const currentStock = Number(currentProduct.stock) || <span class="branch-1 cbranch-no" title="branch not covered" >0</span>
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (currentStock &lt; item.qty) {
+<span class="cstat-no" title="statement not covered" >          stockWarnings.push(`${item.name}: stok tersisa ${currentStock}, transaksi mencatat ${item.qty}`)</span>
+<span class="cstat-no" title="statement not covered" >          continue</span>
+        }
+        const { data: updatedProduct, error: stockError } = await supabase
+          .from('products')
+          .update({ stock: currentStock - item.qty })
+          .eq('id', item.id)
+          .eq('stock', currentStock)
+          .select('id, stock')
+          .maybeSingle()
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (stockError || !updatedProduct) {
+<span class="cstat-no" title="statement not covered" >          stockWarnings.push(`${item.name}: stok gagal diperbarui`)</span>
+<span class="cstat-no" title="statement not covered" >          continue</span>
+        }
+        onStockUpdated?.(item.id, updatedProduct.stock)
+      }
+&nbsp;
+      onOrderCreated?.(transaction)
+      setReceiptData({ transaction, items: transaction.items, store, stockWarnings })
+    } catch (error) {
+      setNotice(`Pembayaran belum tersimpan: ${error.message}`)
+    } finally {
+      setPaying(false)
+    }
+  }
+&nbsp;
+  const startNewTransaction = () =&gt; {
+    clearCart()
+    setReceiptData(null)
+    setNotice('')
+    setMethod('cash')
+  }
+&nbsp;
+  const soldAt = receiptData?.transaction.create_at
+    ? new Date(receiptData.transaction.create_at).toLocaleString('id-ID', { dateStyle: 'medium', timeStyle: 'short' })
+    : ''
+&nbsp;
+  return &lt;&gt;
+    &lt;aside className="flex min-h-[560px] flex-col overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-[0_12px_40px_rgba(15,23,42,.07)] xl:sticky xl:top-[88px] xl:col-span-4 xl:h-[calc(100vh-120px)] xl:min-h-0"&gt;
+      &lt;div className="flex shrink-0 items-center justify-between border-b border-slate-100 bg-white px-5 py-4"&gt;
+        &lt;div&gt;&lt;p className="text-[10px] font-bold uppercase tracking-[.15em] text-teal-700"&gt;Pembayaran&lt;/p&gt;&lt;h2 className="mt-0.5 font-bold text-slate-950"&gt;Keranjang&lt;/h2&gt;&lt;/div&gt;
+        &lt;span className="rounded-full bg-teal-50 px-3 py-1.5 text-xs font-bold text-teal-800"&gt;{items.reduce((count, item) =&gt; count + item.qty, 0)} item&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div className="flex shrink-0 items-center justify-between px-5 py-3"&gt;&lt;span className="text-xs font-semibold text-slate-600"&gt;Pesanan saat ini&lt;/span&gt;{items.length &gt; 0 &amp;&amp; &lt;button onClick={clearCart} className="text-[11px] font-semibold text-rose-500 transition hover:text-rose-700"&gt;Kosongkan&lt;/button&gt;}&lt;/div&gt;
+      &lt;div className="min-h-0 flex-1 space-y-1 overflow-y-auto px-4 pb-3"&gt;
+        {items.length === 0 ? &lt;div className="grid h-full min-h-48 place-items-center text-center"&gt;&lt;div&gt;&lt;div className="mx-auto mb-3 grid h-14 w-14 place-items-center rounded-2xl bg-teal-50 text-teal-600"&gt;&lt;Icon name="sales" size={24}/&gt;&lt;/div&gt;&lt;p className="text-sm font-semibold text-slate-700"&gt;Keranjang masih kosong&lt;/p&gt;&lt;p className="mt-1 text-xs text-slate-400"&gt;Pilih produk untuk mulai transaksi&lt;/p&gt;&lt;/div&gt;&lt;/div&gt; : items.map((item) =&gt; &lt;div key={item.id} className="flex gap-3 rounded-xl p-2.5 transition hover:bg-slate-50"&gt;
+          &lt;img src={item.imageUrl || item.image || 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&amp;fit=crop&amp;w=120&amp;q=80'} alt="" className="h-12 w-12 rounded-xl bg-slate-100 object-cover"/&gt;
+          &lt;div className="min-w-0 flex-1"&gt;&lt;div className="flex items-start justify-between gap-2"&gt;&lt;p className="truncate text-xs font-semibold text-slate-800"&gt;{item.name}&lt;/p&gt;&lt;button aria-label={`Hapus ${item.name}`} <span class="fstat-no" title="function not covered" >onClick={() =&gt; <span class="cstat-no" title="statement not covered" >r</span>emoveItem(item.id)} c</span>lassName="text-slate-300 transition hover:text-rose-500"&gt;&lt;Icon name="trash" size={14}/&gt;&lt;/button&gt;&lt;/div&gt;&lt;p className="mt-1 text-[11px] text-slate-400"&gt;{idr(item.price)}&lt;/p&gt;&lt;div className="mt-2 flex items-center justify-between"&gt;&lt;div className="flex items-center gap-2"&gt;&lt;button <span class="fstat-no" title="function not covered" >onClick={() =&gt; <span class="cstat-no" title="statement not covered" >u</span>pdateQuantity(item.id, -1)} a</span>ria-label="Kurangi jumlah" className="grid h-6 w-6 place-items-center rounded-lg border border-slate-200 text-slate-500 transition hover:border-teal-300 hover:text-teal-700"&gt;&lt;Icon name="minus" size={12}/&gt;&lt;/button&gt;&lt;span className="w-4 text-center text-xs font-semibold"&gt;{item.qty}&lt;/span&gt;&lt;button <span class="fstat-no" title="function not covered" >onClick={() =&gt; <span class="cstat-no" title="statement not covered" >u</span>pdateQuantity(item.id, 1)} a</span>ria-label="Tambah jumlah" disabled={Number(item.stock ?? 0) &lt;= item.qty} className="grid h-6 w-6 place-items-center rounded-lg bg-teal-50 text-teal-700 transition hover:bg-teal-100 disabled:opacity-40"&gt;&lt;Icon name="plus" size={12}/&gt;&lt;/button&gt;&lt;/div&gt;&lt;span className="text-xs font-semibold text-slate-700"&gt;{idr(item.price * item.qty)}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;/div&gt;)}
+      &lt;/div&gt;
+      &lt;div className="shrink-0 border-t border-slate-100 bg-slate-50/70 px-5 py-4"&gt;
+        &lt;div className="space-y-2.5 text-xs"&gt;&lt;p className="text-[10px] text-slate-400"&gt;Harga produk sudah termasuk pajak.&lt;/p&gt;&lt;div className="flex justify-between text-slate-500"&gt;&lt;span&gt;Subtotal (sebelum pajak)&lt;/span&gt;&lt;span&gt;{idr(subtotal)}&lt;/span&gt;&lt;/div&gt;&lt;div className="flex justify-between text-slate-500"&gt;&lt;span&gt;Pajak termasuk (8%)&lt;/span&gt;&lt;span&gt;{idr(tax)}&lt;/span&gt;&lt;/div&gt;&lt;div className="my-3 border-t border-slate-200"/&gt;&lt;div className="flex items-center justify-between text-sm font-bold text-slate-950"&gt;&lt;span&gt;Total bayar&lt;/span&gt;&lt;span className="text-base text-[#0d766e]"&gt;{idr(total)}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+        &lt;div className="mt-4 grid grid-cols-2 gap-2"&gt;&lt;button onClick={() =&gt; setMethod('cash')} className={`rounded-xl border py-2.5 text-xs font-semibold transition ${method === 'cash' ? 'border-teal-600 bg-teal-50 text-teal-800 ring-2 ring-teal-500/10' : 'border-slate-200 bg-white text-slate-500 hover:border-teal-200'}`}&gt;Cash&lt;/button&gt;&lt;button onClick={() =&gt; setMethod('qris')} className={`rounded-xl border py-2.5 text-xs font-semibold transition ${method === 'qris' ? 'border-teal-600 bg-teal-50 text-teal-800 ring-2 ring-teal-500/10' : 'border-slate-200 bg-white text-slate-500 hover:border-teal-200'}`}&gt;QRIS&lt;/button&gt;&lt;/div&gt;
+        {notice &amp;&amp; &lt;p role="alert" className="mt-3 rounded-lg bg-rose-50 px-3 py-2 text-[11px] text-rose-700"&gt;{notice}&lt;/p&gt;}
+        &lt;button disabled={!items.length || paying} onClick={checkout} className="mt-3 flex w-full items-center justify-center gap-2 rounded-xl bg-[#0d766e] py-3 text-sm font-semibold text-white shadow-lg shadow-teal-900/10 transition hover:bg-[#095d57] disabled:cursor-not-allowed disabled:opacity-40"&gt;{paying ? 'Memproses...' : `Bayar ${idr(total)}`} &lt;Icon name="arrow" size={16}/&gt;&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/aside&gt;
+&nbsp;
+    {receiptData &amp;&amp; &lt;div className="fixed inset-0 z-[70] grid place-items-center overflow-y-auto bg-slate-950/55 p-4 backdrop-blur-sm print:static print:block print:overflow-visible print:bg-white print:p-0"&gt;
+      &lt;div className="w-full max-w-md rounded-3xl border border-white/60 bg-white p-5 shadow-2xl print-receipt-wrap"&gt;
+        &lt;div className="mb-4 flex items-center gap-2 rounded-xl bg-emerald-50 px-3 py-2.5 text-sm font-semibold text-emerald-800 print:hidden"&gt;&lt;span className="grid h-6 w-6 place-items-center rounded-full bg-emerald-600 text-white"&gt;&lt;Icon name="check" size={15}/&gt;&lt;/span&gt;Transaksi Berhasil&lt;/div&gt;
+        {receiptData.stockWarnings.length &gt; 0 &amp;&amp; &lt;div role="alert" className="mb-3 rounded-xl border border-amber-200 bg-amber-50 px-3 py-2.5 text-xs leading-5 text-amber-800 print:hidden"&gt;Transaksi tersimpan, tetapi stok perlu diperiksa: {receiptData.stockWarnings.join('; ')}.&lt;/div&gt;}
+        &lt;div className="receipt-print-area mx-auto w-full max-w-[300px] bg-white p-1 font-mono text-[11px] leading-[1.45] text-black"&gt;
+          &lt;div className="text-center"&gt;&lt;h2 className="text-base font-bold uppercase"&gt;{receiptData.store?.store_name || 'PosU Store'}&lt;/h2&gt;{receiptData.store?.address &amp;&amp; &lt;p className="mt-1 whitespace-pre-line"&gt;{receiptData.store.address}&lt;/p&gt;}{receiptData.store?.phone &amp;&amp; &lt;p&gt;{receiptData.store.phone}&lt;/p&gt;}&lt;/div&gt;
+          &lt;div className="my-3 border-t border-dashed border-black"/&gt;&lt;div className="flex justify-between"&gt;&lt;span&gt;No.&lt;/span&gt;&lt;span&gt;{receiptData.transaction.id}&lt;/span&gt;&lt;/div&gt;&lt;div className="flex justify-between"&gt;&lt;span&gt;Waktu&lt;/span&gt;&lt;span&gt;{soldAt}&lt;/span&gt;&lt;/div&gt;&lt;div className="my-3 border-t border-dashed border-black"/&gt;
+          &lt;div className="space-y-2"&gt;{receiptData.items.map((item, index) =&gt; &lt;div key={`${item.id}-${index}`}&gt;&lt;div className="font-semibold"&gt;{item.name}&lt;/div&gt;&lt;div className="flex justify-between"&gt;&lt;span&gt;{item.qty} x {idr(item.price)}&lt;/span&gt;&lt;span&gt;{idr(Number(item.price) * Number(item.qty))}&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;)}&lt;/div&gt;
+          &lt;div className="my-3 border-t border-dashed border-black"/&gt;&lt;div className="flex justify-between"&gt;&lt;span&gt;Subtotal sebelum pajak&lt;/span&gt;&lt;span&gt;{idr(receiptData.transaction.subtotal)}&lt;/span&gt;&lt;/div&gt;&lt;div className="flex justify-between"&gt;&lt;span&gt;Pajak termasuk (8%)&lt;/span&gt;&lt;span&gt;{idr(receiptData.transaction.grand_total - receiptData.transaction.subtotal)}&lt;/span&gt;&lt;/div&gt;&lt;div className="my-2 border-t border-black"/&gt;&lt;div className="flex justify-between text-sm font-bold"&gt;&lt;span&gt;TOTAL&lt;/span&gt;&lt;span&gt;{idr(receiptData.transaction.grand_total)}&lt;/span&gt;&lt;/div&gt;&lt;div className="mt-1 flex justify-between"&gt;&lt;span&gt;Pembayaran&lt;/span&gt;&lt;span&gt;{receiptData.transaction.payment_method.toUpperCase()}&lt;/span&gt;&lt;/div&gt;&lt;div className="mt-4 border-t border-dashed border-black pt-3 text-center"&gt;{receiptData.store?.receipt_footer || 'Terima kasih telah berbelanja!'}&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div className="mt-5 grid grid-cols-2 gap-2 print:hidden"&gt;&lt;button onClick={() =&gt; window.print()} className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-200 py-3 text-xs font-semibold text-slate-700 transition hover:bg-slate-50"&gt;&lt;Icon name="print" size={16}/&gt;Cetak Struk&lt;/button&gt;&lt;button onClick={startNewTransaction} className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#0d766e] py-3 text-xs font-semibold text-white shadow-sm transition hover:bg-[#095d57]"&gt;&lt;Icon name="plus" size={16}/&gt;Transaksi Baru&lt;/button&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;}
+  &lt;/&gt;
+}
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-11-11T04:31:18.132Z
+            </div>
+        <script src="../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
+    </body>
+</html>
+    

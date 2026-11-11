@@ -1,0 +1,6 @@
+projectKey=PosU-kasirpintar
+serverUrl=http://localhost:9000
+serverVersion=26.10.0.133078
+dashboardUrl=http://localhost:9000/dashboard?id=PosU-kasirpintar
+ceTaskId=d90ceb9a-fd7a-4c78-9fe4-a990d8897df8
+ceTaskUrl=http://localhost:9000/api/ce/task?id=d90ceb9a-fd7a-4c78-9fe4-a990d8897df8
