@@ -33,9 +33,9 @@ export default defineConfig({
     exclude: ['**/node_modules/**', '**/.features-gen/**', '**/tests/**'],
     coverage: {
       provider: 'v8',
-      reporter: ['text', 'html', 'lcov'],
+      reporter: ['text', 'lcov'],
       include: ['src/**/*.{js,jsx}'],
       exclude: ['src/main.jsx', 'src/supabaseClient.js', 'src/test/**']
     }
   },
-})
+})  
